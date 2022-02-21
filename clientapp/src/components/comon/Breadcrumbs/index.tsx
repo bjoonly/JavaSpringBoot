@@ -13,7 +13,11 @@ const breadcrumbNameMap: { [key: string]: string } = {
     '/trash': 'Trash',
     '/spam': 'Spam',
     '/drafts': 'Drafts',
-    '/users': 'Users'
+    '/users': 'Users',
+    '/regions': 'Regions',
+    '/regions/create': "Create",
+    '/hotels': 'Hotels',
+    '/hotels/create': "Create",
 };
 
 const BreadcrumbsMenu: React.FC = () => {

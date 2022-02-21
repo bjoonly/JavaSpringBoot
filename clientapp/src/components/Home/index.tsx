@@ -1,9 +1,9 @@
-import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import {
     Box,
-    Collapse,
-    List,
+    Button,
     Slide,
+    Grid,
+    TextField,
     Typography
 } from "@mui/material";
 import {
@@ -35,6 +35,7 @@ const Home: React.FC = () => {
     //     setOpen((prevOpen) => !prevOpen);
     //     console.log(open)
     // };
+
 
     const selectImage = async (url: string) => {
         if (!cropperObj) {
@@ -68,30 +69,30 @@ const Home: React.FC = () => {
 
     const cropperDialogSave = async function (e: React.MouseEvent<HTMLElement>) {
         const base = cropperObj?.getCroppedCanvas().toDataURL() as string;
+        console.log(base);
         await setFileSelected(base)
         setIsCropperDialogOpen(false);
     };
 
     return (
         <>
-            <Box
-                sx={{
-                    mt: 1,
-                }}
-                component="main"
-            >
+            <Grid>
+                <Box sx={{ width: "100%", display: "flex" }}>
+                    <Grid item sx={{ py: 2, width: "70%" }}>
+                        <Grid item xs={12} mb={3}>
+                            <Typography variant="h5">Home</Typography>
+                        </Grid>
 
-                {/* <List>
-                    <ListItemLink to="/inbox" open={open} onClick={handleClick} />
-                    <Collapse component="li" in={open} timeout="auto" unmountOnExit>
-                        <List disablePadding>
-                            <ListItemLink sx={{ pl: 4 }} to="/inbox/important" />
-                        </List>
-                    </Collapse>
-                    <ListItemLink to="/trash" />
-                    <ListItemLink to="/spam" />
-                </List> */}
-                <Typography variant="h6" color="inherit" component="div">
+                    </Grid>
+                </Box>
+
+            </Grid>
+
+            {/* <Typography variant="h5" color="inherit" component="div" sx={{ mb: 2 }}>
+                    Region
+                </Typography>
+                <TextField type="text" label="Name" name="Name" id="Image" sx={{ mb: 2 }} />
+                <Typography variant="h6" color="inherit" component="div" >
                     Choose image
                 </Typography>
                 <label htmlFor="Image">
@@ -101,15 +102,8 @@ const Home: React.FC = () => {
                         style={{ width: "160px", height: "160px", cursor: "pointer", borderRadius: 7 }} />
                 </label>
                 <input style={{ display: "none" }} type="file" name="Image" id="Image" onChange={handleImageChange} />
-            </Box>
-            <CropperDialog
-                Transition={Transition}
-                imgRef={imgRef}
-                preview={prevRef}
-                modalSave={cropperDialogSave}
-                isDialogOpen={isCropperDialogOpen}
-                modalClose={cropperDialogClose}
-                image={fileSelected} />
+                <Button >Add</Button>
+            </Box> */}
         </>
     )
 }

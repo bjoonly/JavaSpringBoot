@@ -6,4 +6,5 @@ import lombok.Data;
 public class ShowRegionDto {
     private int id;
     private String name;
+    private String image;
 }

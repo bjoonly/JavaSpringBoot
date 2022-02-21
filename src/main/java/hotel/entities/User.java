@@ -6,8 +6,8 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Data
-@Entity
-@Table(name = "Users", schema = "dbo")
+//@Entity
+//@Table(name = "Users", schema = "dbo")
 public class User {
     @Id
     @Column(name = "Id")

@@ -13,5 +13,5 @@ public interface RegionMapper {
 
     ShowRegionDto RegionToShowRegionDto(Region region);
 
-    List<ShowRegionDto> RegionListToShowRegionDto(List<Region> regions);
+    List<ShowRegionDto> RegionListToShowRegionDtoList(List<Region> regions);
 }

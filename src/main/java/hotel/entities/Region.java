@@ -8,7 +8,7 @@ import java.util.List;
 
 @Data
 @Entity
-//@Table(name = "tbl_region")
+@Table(name = "tbl_region")
 public class Region {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,6 +17,11 @@ public class Region {
     @Column(length = 200, nullable = false)
     private String name;
 
+    @Column(name = "image")
+    private String image;
+
     @OneToMany(mappedBy = "region", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     List<City> cities = new ArrayList<>();
+
+
 }

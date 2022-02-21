@@ -21,8 +21,14 @@ const Header: React.FC = () => {
                                 Hotel
                             </Typography>
 
-                            <Typography variant="body1" noWrap color="inherit" component={Link} to="/users" style={{ textDecoration: 'none' }}>
+                            <Typography variant="body1" sx={{ mr: 3 }} noWrap color="inherit" component={Link} to="/users" style={{ textDecoration: 'none' }}>
                                 Users
+                            </Typography>
+                            <Typography variant="body1" sx={{ mr: 3 }} noWrap color="inherit" component={Link} to="/regions/create" style={{ textDecoration: 'none' }}>
+                                Regions
+                            </Typography>
+                            <Typography variant="body1" sx={{ mr: 3 }} noWrap color="inherit" component={Link} to="/hotels/create" style={{ textDecoration: 'none' }}>
+                                Hotels
                             </Typography>
                         </Box>
                     </Toolbar>
