@@ -40,6 +40,7 @@ public class HomeController {
     public String upload(@RequestBody ImageDto dto) {
         String fileName = storageService.save(dto.getBase64());
         HotelImage image = new HotelImage(fileName);
+        image.setHotel(null);
         hotelImageRepository.save(image);
         return fileName;
     }

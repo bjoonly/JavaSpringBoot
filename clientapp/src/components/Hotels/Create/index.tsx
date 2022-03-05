@@ -10,14 +10,14 @@ import {
 import CropperDialog from "../../comon/CropperDialog";
 import { useActions } from "../../../hooks/useActions";
 import { baseURL } from "../../../http_comon";
-
+import { useNavigate } from "react-router-dom";
 
 
 const CreateHotel: React.FC = () => {
     const [name, setName] = React.useState<string>("");
     const [description, setDescription] = React.useState<string>("");
     const { UploadImage, AddHotel } = useActions();
-
+    const navigate = useNavigate();
     const [images, setImages] = React.useState<Array<string>>([]);
 
     const dataImages = images.map((item, key) => {
@@ -29,6 +29,7 @@ const CreateHotel: React.FC = () => {
     })
     const onButtonClick = () => {
         AddHotel({ name: name, description: description, images: images });
+        navigate("/hotels");
     }
     const handleSelected = async (base64: string) => {
         const image = await UploadImage(base64);

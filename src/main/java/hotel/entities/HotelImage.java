@@ -21,6 +21,10 @@ public class HotelImage {
     @JoinColumn(name = "hotel_id")
     private Hotel hotel;
 
+//    @Column(name = "hotel_id")
+//    private int hotelId;
+
+
     public HotelImage(String name) {
         this.name = name;
     }

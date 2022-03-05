@@ -73,7 +73,7 @@ public class FileSystemStorageService implements StorageService {
         try {
             Files.deleteIfExists(Paths.get(rootLocation.toString(), name));
         } catch (Exception ex) {
-            throw new StorageException("File with name" + name + "doesn't exist.", ex);
+            throw new StorageException("File with name" + name + " doesn't exist.", ex);
         }
     }
 }

@@ -1,5 +1,5 @@
 import { Typography, Breadcrumbs } from '@mui/material';
-import { useLocation, Link as RouterLink, LinkProps } from 'react-router-dom';
+import { useLocation, Link as RouterLink } from 'react-router-dom';
 import Link from '@mui/material/Link';
 
 const LinkRouter = (props: any) => (
@@ -18,6 +18,7 @@ const breadcrumbNameMap: { [key: string]: string } = {
     '/regions/create': "Create",
     '/hotels': 'Hotels',
     '/hotels/create': "Create",
+    '/hotels/edit': "Edit"
 };
 
 const BreadcrumbsMenu: React.FC = () => {
