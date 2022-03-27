@@ -1,4 +1,6 @@
 import type { RouteObject } from "react-router-dom"
+import Login from "./components/Auth/Login";
+import Register from "./components/Auth/Register";
 import DefaultLayout from "./components/containers/DefaultLayout";
 import Home from "./components/Home";
 import CreateHotel from "./components/Hotels/Create";
@@ -35,6 +37,14 @@ const routes: RouteObject[] = [
             {
                 path: "/users",
                 element: <Users />
+            },
+            {
+                path: "/auth/login",
+                element: <Login />
+            },
+            {
+                path: "/auth/register",
+                element: <Register />
             },
             {
                 path: "*",

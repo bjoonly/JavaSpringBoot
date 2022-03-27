@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { store } from "./store"
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import "cropperjs/dist/cropper.css";
 import { Provider } from 'react-redux';
+import { AuthUser } from './components/Auth/actions';
+import 'react-toastify/dist/ReactToastify.css';
+const token = localStorage.token as string;
+
+if (token) {
+  AuthUser(token, store.dispatch);
+}
+
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>

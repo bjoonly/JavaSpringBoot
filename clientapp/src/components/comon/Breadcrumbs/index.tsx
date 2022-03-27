@@ -18,7 +18,10 @@ const breadcrumbNameMap: { [key: string]: string } = {
     '/regions/create': "Create",
     '/hotels': 'Hotels',
     '/hotels/create': "Create",
-    '/hotels/edit': "Edit"
+    '/hotels/edit': "Edit",
+    '/auth': "Auth",
+    '/auth/login': "Login",
+    '/auth/register': "Register",
 };
 
 const BreadcrumbsMenu: React.FC = () => {
